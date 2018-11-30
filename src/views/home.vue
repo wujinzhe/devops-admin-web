@@ -1,19 +1,31 @@
 <template>
   <div>
-    <div>
-      <el-button>默认按钮</el-button>
-      <el-button type="primary">主要按钮</el-button>
-      <el-button type="success">成功按钮</el-button>
-      <el-button type="info">信息按钮</el-button>
-      <el-button type="warning">警告按钮</el-button>
-      <el-button type="danger">危险按钮</el-button>
-    </div>
+    <a-date-picker @change="onChange" />
+    <a-month-picker
+      @change="onChange"
+      placeholder="请选择月份" />
+    <a-button
+      type="primary"
+      @click="click">Primary</a-button>
 
-    <div style="margin-top: 10px;">
-      <el-date-picker
-        type="date"
-        placeholder="选择日期"/>
-    </div>
+    <a-dropdown>
+      <a
+        class="ant-dropdown-link"
+        href="#">
+        Hover me <a-icon type="down" />
+      </a>
+      <a-menu slot="overlay">
+        <a-menu-item>
+          <a href="javascript:;">1st menu item</a>
+        </a-menu-item>
+        <a-menu-item>
+          <a href="javascript:;">2nd menu item</a>
+        </a-menu-item>
+        <a-menu-item>
+          <a href="javascript:;">3rd menu item</a>
+        </a-menu-item>
+      </a-menu>
+    </a-dropdown>
   </div>
 </template>
 <script>

@@ -1,17 +1,28 @@
 <template>
-  <div class="header">
-    <el-button
-      type="primary"
-      icon="el-icon-star-off"
-      circle/>
-    <el-breadcrumb
-      class="breadcrumb"
-      separator="/">
-      <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
-      <el-breadcrumb-item><a href="/">活动管理</a></el-breadcrumb-item>
-      <el-breadcrumb-item>活动列表</el-breadcrumb-item>
-      <el-breadcrumb-item>活动详情</el-breadcrumb-item>
-    </el-breadcrumb>
+  <div class="header-info">
+    <div class="header-info__user">
+      <a-avatar
+        style="background-color: #87d068;"
+        icon="user" />
+      <a-dropdown>
+        <a
+          class="ant-dropdown-link"
+          href="#">
+          张三疯<a-icon type="down" />
+        </a>
+        <a-menu slot="overlay">
+          <a-menu-item>
+            <a href="javascript:;">1st menu item</a>
+          </a-menu-item>
+          <a-menu-item>
+            <a href="javascript:;">2nd menu item</a>
+          </a-menu-item>
+          <a-menu-item>
+            <a href="javascript:;">3rd menu item</a>
+          </a-menu-item>
+        </a-menu>
+      </a-dropdown>
+    </div>
   </div>
 </template>
 
@@ -21,7 +32,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
   .header {
     display: flex;
     height: 100%;

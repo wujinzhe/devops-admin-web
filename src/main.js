@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import router from './router'
+import Antd from 'ant-design-vue'
 import App from './App'
-import './theme/common.scss'
-import './theme/default/variables.scss'
-import ElementUI from 'element-ui'
-Vue.use(ElementUI)
+import './theme/common.less'
+
+Vue.use(Antd)
 
 Vue.config.productionTip = false
 

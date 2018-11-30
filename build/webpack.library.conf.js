@@ -29,9 +29,7 @@ module.exports = {
       'vue/dist/vue.esm.js',
       'vue-router',
       'vuex',
-      'axios',
-      'element-ui',
-      path.resolve(__dirname, '../src/theme/default/variables.scss')
+      'axios'
     ]
   },
   output: {

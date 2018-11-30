@@ -1,28 +1,24 @@
 <template>
-  <div>
-    <el-menu
-      default-active="2"
-      class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose">
-      <el-submenu index="1">
-        <template slot="title">
-          <i class="el-icon-location"/>
-          <span>导航一</span>
-        </template>
-        <el-menu-item index="1-1">选项1</el-menu-item>
-        <el-menu-item index="1-2">选项2</el-menu-item>
-      </el-submenu>
-      <el-menu-item index="2">
-        <i class="el-icon-menu"/>
-        <span slot="title">导航二</span>
-      </el-menu-item>
-      <el-menu-item index="4">
-        <i class="el-icon-setting"/>
-        <span slot="title">导航四</span>
-      </el-menu-item>
-    </el-menu>
-  </div>
+  <a-menu
+    theme="light"
+    mode="inline"
+    :default-selected-keys="['1']">
+    <a-sub-menu key="sub1">
+      <span slot="title"><a-icon type="mail" /><span>Navigation One</span></span>
+      <a-menu-item key="5">Option 5</a-menu-item>
+      <a-menu-item key="6">Option 6</a-menu-item>
+      <a-menu-item key="7">Option 7</a-menu-item>
+      <a-menu-item key="8">Option 8</a-menu-item>
+    </a-sub-menu>
+    <a-menu-item key="2">
+      <a-icon type="video-camera" />
+      <span>nav 2</span>
+    </a-menu-item>
+    <a-menu-item key="3">
+      <a-icon type="upload" />
+      <span>nav 3</span>
+    </a-menu-item>
+  </a-menu>
 </template>
 
 <script>
